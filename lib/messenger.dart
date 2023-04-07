@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 
 class MessenGer extends StatefulWidget {
-  const MessenGer({super.key, ScreenArgument? args});
+  const MessenGer({super.key, this.args});
+  final ScreenArgument? args;
 
   @override
   State<MessenGer> createState() => _MessenGerState();
@@ -25,8 +26,6 @@ class _MessenGerState extends State<MessenGer> {
     UserHorizontal(avatar: "assets/images/picture-j.jpg", name: "Quang 10"),
   ];
 
-  final ScreenArgument? args;
-
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +45,8 @@ class _MessenGerState extends State<MessenGer> {
                     fontWeight: FontWeight.w700
                    )
                   ),
-                  Text(args?.Username ?? "null",
+                  const SizedBox(width: 4),
+                  Text(widget.args?.Username ?? "null",
                     style: const TextStyle(
                     fontFamily: 'SVN-Avo',
                     fontSize: 20,

@@ -126,7 +126,7 @@ class _LogInState extends State<LogIn> {
                  ),
                ),
                 onPressed: () {
-                  if (userNameController.text == "quang" &&
+                  if (userNameController.text == "Quang" &&
                      passWordController.text == "quangdeptrai") {
                       Navigator.pushNamed(
                     context, 
@@ -140,14 +140,14 @@ class _LogInState extends State<LogIn> {
                   showDialog(
                    context: context,
                      builder: (context) => AlertDialog(
-                       title: Text("Lỗi"),
-                       content: Text("Tên người dùng hoặc mật khẩu không đúng."),
+                       title: const Text("Lỗi"),
+                       content: const Text("Tên người dùng hoặc mật khẩu không đúng."),
                          actions: [
                           TextButton(
                           onPressed: () {
                         Navigator.pop(context);
               },
-              child: Text("Đóng"),
+              child: const Text("Đóng"),
             ),
           ],
         ),
